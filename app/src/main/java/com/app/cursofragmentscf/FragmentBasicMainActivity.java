@@ -7,12 +7,12 @@ import android.os.Bundle;
 
 import com.app.cursofragmentscf.Ejemplo_1.TwoFragment;
 
-public class MainActivity extends AppCompatActivity {
+public class FragmentBasicMainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.fragment_basic_activity_main);
 
         TwoFragment codeFragment = new TwoFragment();
         FragmentManager fragmentManager = getSupportFragmentManager();
