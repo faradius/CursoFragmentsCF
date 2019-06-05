@@ -1,4 +1,4 @@
-package com.app.cursofragmentscf;
+package com.app.cursofragmentscf.Ejemplo_1;
 
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.app.cursofragmentscf.Ejemplo_1.TwoFragment;
+import com.app.cursofragmentscf.R;
 
 public class FragmentBasicMainActivity extends AppCompatActivity {
 
