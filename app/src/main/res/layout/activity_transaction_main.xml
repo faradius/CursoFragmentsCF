@@ -106,6 +106,35 @@
 
     </android.support.constraint.ConstraintLayout>
 
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+        tools:layout_editor_absoluteX="-26dp">
+
+        <Button
+            android:id="@+id/attachA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Attach A"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/attachB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Attach B"
+            app:layout_constraintBottom_toBottomOf="@+id/attachA"
+            app:layout_constraintStart_toEndOf="@+id/attachA"
+            app:layout_constraintTop_toTopOf="@+id/attachA"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
     <FrameLayout
         android:id="@+id/frameLayoutTransaction"
         android:layout_width="match_parent"
@@ -115,7 +144,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3" />
 
     <Button
         android:id="@+id/button3"

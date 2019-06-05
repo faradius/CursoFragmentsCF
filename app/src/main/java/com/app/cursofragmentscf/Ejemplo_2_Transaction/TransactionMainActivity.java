@@ -10,7 +10,7 @@ import android.widget.Button;
 import com.app.cursofragmentscf.R;
 
 public class TransactionMainActivity extends AppCompatActivity {
-    Button addA,addB,removeA,removeB,replaceA,replaceB,detachA,detachB;
+    Button addA,addB,removeA,removeB,replaceA,replaceB,detachA,detachB,attachA,attachB;
     FragmentManager fragmentManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +25,8 @@ public class TransactionMainActivity extends AppCompatActivity {
         replaceB = findViewById(R.id.replaceB);
         detachA = findViewById(R.id.detachA);
         detachB = findViewById(R.id.detachB);
+        attachA = findViewById(R.id.attachA);
+        attachB = findViewById(R.id.attachB);
 
         fragmentManager = getSupportFragmentManager();
 
@@ -123,6 +125,20 @@ public class TransactionMainActivity extends AppCompatActivity {
                 }else{
 
                 }
+            }
+        });
+
+        attachA.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        attachB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
             }
         });
     }
