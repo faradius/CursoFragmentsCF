@@ -53,24 +53,76 @@
             app:layout_constraintVertical_bias="1.0" />
     </android.support.constraint.ConstraintLayout>
 
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintVertical_bias="0.0">
+
+        <Button
+            android:id="@+id/replaceA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Replace A"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/replaceB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Replace B"
+            app:layout_constraintBottom_toBottomOf="@+id/replaceA"
+            app:layout_constraintStart_toEndOf="@+id/replaceA"
+            app:layout_constraintTop_toTopOf="@+id/replaceA"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/detachA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detach A"
+            app:layout_constraintBottom_toBottomOf="@+id/replaceB"
+            app:layout_constraintStart_toEndOf="@+id/replaceB"
+            app:layout_constraintTop_toTopOf="@+id/replaceB"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/detachB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Detach B"
+            app:layout_constraintBottom_toBottomOf="@+id/detachA"
+            app:layout_constraintStart_toEndOf="@+id/detachA"
+            app:layout_constraintTop_toTopOf="@+id/detachA"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </android.support.constraint.ConstraintLayout>
+
     <FrameLayout
         android:id="@+id/frameLayoutTransaction"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"/>
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
 
     <Button
+        android:id="@+id/button3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginBottom="4dp"
         android:text="Bienvenido"
-        app:layout_constraintBottom_toBottomOf="@+id/frameLayoutTransaction"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintBottom_toBottomOf="parent"
         tools:layout_editor_absoluteX="0dp" />
 </android.support.constraint.ConstraintLayout>

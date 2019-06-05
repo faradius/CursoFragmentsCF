@@ -10,7 +10,7 @@ import android.widget.Button;
 import com.app.cursofragmentscf.R;
 
 public class TransactionMainActivity extends AppCompatActivity {
-    Button addA,addB,removeA,removeB;
+    Button addA,addB,removeA,removeB,replaceA,replaceB,detachA,detachB;
     FragmentManager fragmentManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +21,11 @@ public class TransactionMainActivity extends AppCompatActivity {
         addB = findViewById(R.id.addB);
         removeA = findViewById(R.id.removeA);
         removeB = findViewById(R.id.removeB);
+        replaceA = findViewById(R.id.replaceA);
+        replaceB = findViewById(R.id.replaceB);
+        detachA = findViewById(R.id.detachA);
+        detachB = findViewById(R.id.detachB);
+
         fragmentManager = getSupportFragmentManager();
 
         addA.setOnClickListener(new View.OnClickListener() {
@@ -66,6 +71,56 @@ public class TransactionMainActivity extends AppCompatActivity {
                     fragmentTransaction.remove(fragmentB);
                     fragmentTransaction.commit();
                 }else {
+
+                }
+            }
+        });
+
+        replaceA.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentA fragmentA = new FragmentA();
+                FragmentTransaction transaction = fragmentManager.beginTransaction();
+                transaction.replace(R.id.frameLayoutTransaction,fragmentA,"FragmentA");
+                transaction.commit();
+            }
+        });
+
+        replaceB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentB fragmentB = new FragmentB();
+                FragmentTransaction transaction = fragmentManager.beginTransaction();
+                transaction.replace(R.id.frameLayoutTransaction,fragmentB,"FragmentB");
+                transaction.commit();
+
+            }
+        });
+
+        detachA.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentA fragmentA = (FragmentA) fragmentManager.findFragmentByTag("FragmentA");
+                FragmentTransaction transaction = fragmentManager.beginTransaction();
+                if (fragmentA != null){
+                    transaction.detach(fragmentA);
+                    transaction.commit();
+                }else{
+
+                }
+
+            }
+        });
+
+        detachB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentB fragmentB = (FragmentB) fragmentManager.findFragmentByTag("FragmentB");
+                FragmentTransaction transaction = fragmentManager.beginTransaction();
+                if (fragmentB != null){
+                    transaction.detach(fragmentB);
+                    transaction.commit();
+                }else{
 
                 }
             }
