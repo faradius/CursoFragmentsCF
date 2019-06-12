@@ -9,17 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Ejemplo_3_DatosFragments.DatosFragmentsMainActivity">
+        <activity android:name=".Ejemplo_5_Comunicacion_Entre_Fragments.ComBetweenFragmentsMainActivity"></activity>
+        <activity android:name=".Ejemplo_4_FragmentComunication.FragmentComMainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Ejemplo_3_DatosFragments.DatosFragmentsMainActivity"></activity>
         <activity android:name=".MainActivity" />
-        <activity android:name=".Ejemplo_2_Transaction.TransactionMainActivity">
-
-        </activity>
+        <activity android:name=".Ejemplo_2_Transaction.TransactionMainActivity" />
         <activity android:name=".Ejemplo_1.FragmentBasicMainActivity" />
     </application>
 
