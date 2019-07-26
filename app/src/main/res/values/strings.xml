@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">CursoFragmentsCF</string>
+    <string name="valor_fragment_main">Este es el valor que paso</string>
 </resources>

@@ -9,7 +9,7 @@
 
     <TextView
         android:id="@+id/texto"
-        android:text="Este es el valor que paso"
+        android:text="@string/valor_fragment_main"
         android:textSize="20sp"
         android:gravity="center_horizontal"
         android:layout_width="match_parent"
